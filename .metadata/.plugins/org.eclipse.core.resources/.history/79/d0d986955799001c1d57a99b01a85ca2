@@ -1,0 +1,33 @@
+package com.simplilearn.repository;
+
+import javax.management.Query;
+
+import org.apache.tomcat.util.descriptor.web.ContextTransaction;
+import org.springframework.boot.autoconfigure.kafka.KafkaProperties.Admin;
+
+public class AdminRepository {
+	private JpaTemplate hibernateTemplate;
+
+	public HibernateTemplate getHibernateTemplate() {
+		return hibernateTemplate;
+	}
+
+	public void setHibernateTemplate(HibernateTemplate hibernateTemplate) {
+		this.hibernateTemplate = hibernateTemplate;
+	}
+	public boolean verifyAdmin(Admin a) {
+		Session session=hibernateTemplate.getSessionFactory().openSession();
+		ContextTransaction transaction=session.beginTransaction();
+
+		String stmt = "from Admin where email=:email and password=:password";
+		
+		Query query = session.createQuery(stmt,Admin.class);
+		query.setParameter("email", a.getEmail());
+		query.setParameter("password", a.getPassword());
+		List<Admin> results = query.getResultList();
+		transaction.commit();
+		session.close();
+
+		return results.size()>0;	
+	}
+}

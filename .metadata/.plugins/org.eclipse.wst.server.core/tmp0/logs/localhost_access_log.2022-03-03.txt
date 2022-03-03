@@ -1,0 +1,9 @@
+127.0.0.1 - - [03/Mar/2022:12:48:49 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [03/Mar/2022:12:48:51 +0530] "GET /UserFeedback/ HTTP/1.1" 200 57
+0:0:0:0:0:0:0:1 - - [03/Mar/2022:12:48:51 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [03/Mar/2022:12:56:36 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [03/Mar/2022:12:56:36 +0530] "GET /UserFeedback/WEB-INF/classes/static/View.jsp HTTP/1.1" 404 682
+127.0.0.1 - - [03/Mar/2022:12:57:44 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [03/Mar/2022:12:57:45 +0530] "GET /UserFeedback/WEB-INF/classes/static/View.jsp HTTP/1.1" 404 682
+127.0.0.1 - - [03/Mar/2022:13:17:03 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [03/Mar/2022:13:17:04 +0530] "GET /UserFeedback/WEB-INF/classes/static/index.html HTTP/1.1" 404 682
